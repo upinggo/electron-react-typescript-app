@@ -1,6 +1,6 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
-
+console.log(`Current environment: ${process.env.NODE_ENV}`);
 function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 1280,
@@ -9,10 +9,11 @@ function createWindow() {
       nodeIntegration: true,
     },
   });
-  if(process.env.NODE_ENV === 'development'){
-      mainWindow.loadURL('http://localhost:3000'); // React dev server
-  }else{
-      mainWindow.loadFile(path.join(__dirname, '../dist/index.html')); // Production build
+  if (process.env.NODE_ENV === 'development') {
+    console.log('development');
+    mainWindow.loadURL('http://localhost:3000'); // React dev server
+  } else {
+    mainWindow.loadFile(path.join(__dirname, '../dist/index.html')); // Production build
   }
 
 }

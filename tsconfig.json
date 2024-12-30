@@ -10,6 +10,6 @@
     "outDir": "./dist",
     "moduleResolution": "node"
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "src/main.ts"],
   "exclude": ["node_modules"]
 }

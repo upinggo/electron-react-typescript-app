@@ -12,7 +12,7 @@ function createWindow() {
   if(process.env.NODE_ENV === 'development'){
       mainWindow.loadURL('http://localhost:3000'); // React dev server
   }else{
-      mainWindow.loadFile(path.join(__dirname, 'dist/index.html')); // Production build
+      mainWindow.loadFile(path.join(__dirname, '../dist/index.html')); // Production build
   }
 
 }
